@@ -1,5 +1,4 @@
 .venv
 .idea
-taskmanager/main/__pycache__
-taskmanager/taskmanager/__pycache__
+__pycache__
 taskmanager/db.sqlite3
