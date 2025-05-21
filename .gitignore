@@ -2,3 +2,4 @@
 .idea
 taskmanager/main/__pycache__
 taskmanager/taskmanager/__pycache__
+taskmanager/db.sqlite3
