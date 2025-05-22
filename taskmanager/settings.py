@@ -25,7 +25,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'main',
+    'taskmanager.apps.main',
 ]
 
 MIDDLEWARE = [
@@ -43,7 +43,7 @@ ROOT_URLCONF = 'taskmanager.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'taskmanager/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
