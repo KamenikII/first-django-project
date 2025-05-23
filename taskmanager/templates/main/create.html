@@ -1,18 +1,40 @@
 {% extends 'main/base.html' %}
 
-{% block tittle %}
-New task
+{% block title %}
+New Task
 {% endblock %}
 
 {% block content %}
-    <h1>Create task</h1>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.title }}
-        <br>
-        {{ form.content }}
-        <br>
-        <button type="submit" class="btn btn-success">Save</button>
-        <span>{{ error }}</span>
-    </form>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="card shadow-lg border-0 rounded-4">
+                <div class="card-body p-4">
+                    <h2 class="mb-4 text-center text-success">Create New Task</h2>
+
+                    <form method="post" novalidate>
+                        {% csrf_token %}
+
+                        <div class="mb-3">
+                            <label class="form-label">Task Title</label>
+                            {{ form.title }}
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Task Description</label>
+                            {{ form.content }}
+                        </div>
+
+                        {% if error %}
+                            <div class="alert alert-danger mt-3">{{ error }}</div>
+                        {% endif %}
+
+                        <button type="submit" class="btn btn-success w-100">Save Task</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
+
