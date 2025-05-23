@@ -19,7 +19,9 @@ def create(request):
     if request.method == 'POST':
         form = TaskForm(request.POST)
         if form.is_valid():
-            form.save()
+            task = form.save(commit=False)
+            task.author = request.user
+            task.save()
             return redirect('homeless')
         else:
             error = "Fields uncorrected"
