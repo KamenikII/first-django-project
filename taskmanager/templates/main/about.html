@@ -1,10 +1,16 @@
 {% extends 'main/base.html' %}
 
-{% block tittle %}
+{% block title %}
 About
 {% endblock %}
 
 {% block content %}
-    <h1>About us</h1>
-    <p>About who?</p>
+<div class="container text-center mt-5">
+    <h1 class="mb-3">About This Project</h1>
+    <p class="lead">Welcome to our ToDo List App — a simple yet powerful way to stay productive and organized every day.</p>
+    <hr class="my-4">
+    <p class="text-muted">This project was built with Django, Bootstrap, and a bit of love ❤️ by a team that prefers code over selfies 😄</p>
+    <a class="btn btn-outline-primary mt-3" href="/">← Back to Tasks</a>
+</div>
 {% endblock %}
+
